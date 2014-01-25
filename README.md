@@ -1,4 +1,4 @@
-# generator-twoblokes-static [![Build Status](https://secure.travis-ci.org/twoblokes/generator-twoblokes-static.png?branch=master)](https://travis-ci.org/twoblokes/generator-twoblokes-static)
+# generator-twoblokes-static
 
 A generator for [Yeoman](http://yeoman.io).
 
@@ -9,18 +9,19 @@ $ npm install -g yo
 ```
 
 
-
 To install generator-twoblokes-static from npm, run:
 
 ```
 $ npm install -g generator-twoblokes-static
 ```
 
+
 Finally, initiate the generator in a blank directory:
 
 ```
 $ yo twoblokes-static
 ```
+
 
 ## License
 
