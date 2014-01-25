@@ -23,6 +23,13 @@ $ yo twoblokes-static
 ```
 
 
+#### This generator will:
+
+- Create appropriate directories & files into your empty directory
+- Install Bourbon as our Sass mixin library
+- Install Grunt dependencies (sass, minify css & js, imagemin, file watch)
+
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
