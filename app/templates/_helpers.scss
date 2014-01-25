@@ -1,0 +1,101 @@
+@mixin zero {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+}
+
+@mixin hide-text {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+$public_path: "_/img";
+@mixin svg-background($name) {
+  background-image: url('#{$public_path}/#{$name}.png');
+  background-image: none, url('#{$public_path}/#{$name}.svg');
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin border-radius($amount) {
+  -webkit-border-radius: $amount;
+  -moz-border-radius: $amount;
+  border-radius: $amount;
+}
+
+@mixin hide-text {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+@mixin transition($property, $duration, $ms: false) {
+  -webkit-transition: $property $duration ease-in-out;
+  -moz-transition: $property $duration ease-in-out;
+  -o-transition: $property $duration ease-in-out;
+  @if ($ms) {
+    -ms-transition: $property $duration ease-in-out;
+  }
+  transition: $property $duration ease-in-out;
+}
+@mixin transitionLong($property, $duration, $easing:ease-in-out, $delay:false) {
+  @include transitionProperty($property);
+  @include transitionDuration($duration);
+
+  @if($delay) {
+    @include transitionDelay($delay);
+  }
+
+  @if($easing) {
+    @include transitionTimingFunction($easing);
+  }
+}
+@mixin transitionDelay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  transition-delay: $delay;
+}
+@mixin transitionDuration($duration) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+  transition-duration: $duration;
+}
+@mixin transitionProperty($property) {
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -ms-transition-property: $property;
+  transition-property: $property;
+}
+@mixin transitionTimingFunction($easing) {
+  -webkit-transition-timing-function: $easing;
+  -moz-transition-timing-function: $easing;
+  -o-transition-timing-function: $easing;
+  -ms-transition-timing-function: $easing;
+  transition-timing-function: $easing;
+}
